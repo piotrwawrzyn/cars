@@ -1,0 +1,26 @@
+### Create a report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "make": "toyota",
+  "model": "corolla",
+  "year": 2015,
+  "mileage": 4000,
+  "lng": 0,
+  "lat": 0,
+  "price": 20000
+}
+
+### Approve a report
+PATCH  http://localhost:3000/reports/1/approve
+Content-Type: application/json
+
+{
+  "approved": true
+}
+
+
+### Get an estimate for an existing vehicle
+GET  http://localhost:3000/reports?make=toyota&model=corolla&lng=0&lat=0&mileage=5000&year=2013
+
